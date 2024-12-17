@@ -64,8 +64,15 @@ img {
   height: 100%;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding-left: 0;
   list-style: none;
+}
+label,
+input {
+  box-sizing: border-box;
+  outline: transparent;
+  display: block;
 }
