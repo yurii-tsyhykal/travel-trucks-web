@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { axiosInstance } from '../../utils/axiosInstance';
 
-export const getTrucks = createAsyncThunk(
-  'trucks/getAll',
+export const getCampers = createAsyncThunk(
+  'campers/getAll',
   async (_, thunkApi) => {
     try {
       const data = await axiosInstance.get('');
