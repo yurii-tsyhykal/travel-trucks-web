@@ -18,3 +18,10 @@
   font-weight: 600;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../assets/fonts/Inter_28pt-Black.ttf) format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}

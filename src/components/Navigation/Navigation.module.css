@@ -1,0 +1,27 @@
+.headerNav {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 0px;
+
+  .headerLink {
+    display: inline-block;
+    outline: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: var(--main);
+    padding: 14px 0px;
+    transition: color var(--hover-focus-eff);
+    &:hover,
+    &:focus {
+      color: var(--button-hover);
+    }
+
+    &:nth-child(1) {
+      margin-right: 32px;
+    }
+  }
+  .headerLinkActive {
+    color: var(--button-hover);
+  }
+}
