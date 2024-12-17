@@ -1,4 +1,10 @@
 .layoutWrapper {
+  margin: 0 auto;
   max-width: 1312px;
   padding: 0px 64px;
+}
+
+.homePage {
+  margin: 0 auto;
+  max-width: 1440px;
 }

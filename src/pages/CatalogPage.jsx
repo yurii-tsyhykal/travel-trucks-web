@@ -1,5 +1,15 @@
+import CampersList from '../components/CampersList/CampersList';
+import Container from '../components/Container/Container';
+
 const CatalogPage = () => {
-  return <div>catalog</div>;
+  return (
+    <>
+      <Container></Container>
+      <Container>
+        <CampersList />
+      </Container>
+    </>
+  );
 };
 
 export default CatalogPage;

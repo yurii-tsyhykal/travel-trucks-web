@@ -12,17 +12,60 @@
   --inputs: #f7f7f7;
   --white: #ffffff;
 
-  --font-family: 'Inter', sans-serif;
+  --hover-focus-eff: 250ms linear;
 
+  --font-family: 'Inter', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
   line-height: 1.5;
   font-weight: 400;
+  font-family: var(--font-family);
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--main);
+  background-color: var(--white);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a,
+button {
+  cursor: pointer;
+  &:focus {
+    outline: transparent;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  height: 100%;
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
 }

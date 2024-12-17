@@ -1,0 +1,13 @@
+.heroImg {
+  background-image: image-set(
+    url(../../img/hero.webp) 1x,
+    url(../../img//hero@2x.webp) 2x
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.heroText {
+  padding: 260px 64px;
+}
