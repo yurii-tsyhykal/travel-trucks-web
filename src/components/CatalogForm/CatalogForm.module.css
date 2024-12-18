@@ -1,3 +1,10 @@
+.asideCatalog {
+  /* display: inline-block; */
+  max-width: 360px;
+  /* padding-top: 48px;
+  padding-right: 32px; */
+}
+
 .locationLabel {
   position: relative;
   font-size: 16px;

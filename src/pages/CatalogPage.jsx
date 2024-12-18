@@ -11,10 +11,8 @@ const CatalogPage = () => {
 
   return (
     <>
-      <Container container={CONTAINER_VALUES.catalogForm}>
+      <Container container={CONTAINER_VALUES.catalog}>
         <CatalogForm />
-      </Container>
-      <Container container={CONTAINER_VALUES.catalogList}>
         {isLoading ? <Loader /> : <CampersList />}
       </Container>
     </>

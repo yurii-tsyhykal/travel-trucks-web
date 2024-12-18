@@ -1,8 +1,7 @@
 export const CONTAINER_VALUES = {
   heroImg: 'heroImg',
   heroText: 'heroText',
-  catalogForm: 'catalogForm',
-  catalogList: 'catalogList',
+  catalog: 'catalog',
 };
 
 export const FORMS_ID = {
@@ -15,4 +14,24 @@ export const FORMS_ID = {
   van: 'van',
   fully: 'fully',
   alcove: 'alcove',
+};
+
+export const arrayForEquip = [
+  'AC',
+  'transmission',
+  'kitchen',
+  'TV',
+  'bathroom',
+];
+
+export const equipIcons = {
+  AC: '#wind',
+  transmission: '#diagram',
+  kitchen: '#cup-hot',
+  TV: '#tv',
+  bathroom: '#ph_shower',
+};
+
+export const BUTTON_VALUES = {
+  camper: 'camper',
 };
