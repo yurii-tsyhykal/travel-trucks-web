@@ -19,6 +19,7 @@
   padding-right: 32px;
 }
 
-.catalogList {
-  display: inline-block;
+.catalog {
+  display: flex;
+  column-gap: 64px;
 }

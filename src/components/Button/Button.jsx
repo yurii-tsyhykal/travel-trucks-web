@@ -1,8 +1,9 @@
+import clsx from 'clsx';
 import css from './Button.module.css';
 
-const Button = ({ children }) => {
+const Button = ({ children, onPlace}) => {
   return (
-    <button className={css.button} type="submit">
+    <button className={clsx(css.button, css[onPlace] )} type="submit">
       {children}
     </button>
   );
