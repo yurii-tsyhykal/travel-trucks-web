@@ -2,6 +2,7 @@ export const CONTAINER_VALUES = {
   heroImg: 'heroImg',
   heroText: 'heroText',
   catalogForm: 'catalogForm',
+  catalogList: 'catalogList',
 };
 
 export const FORMS_ID = {

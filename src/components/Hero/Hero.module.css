@@ -23,4 +23,9 @@
   letter-spacing: -0.01em;
   color: var(--white);
   background-color: var(--button);
+  transition: background-color var(--hover-focus-eff);
+  &:hover,
+  &:focus {
+    background-color: var(--button-hover);
+  }
 }
