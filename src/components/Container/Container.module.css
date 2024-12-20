@@ -21,5 +21,6 @@
 
 .catalog {
   display: flex;
-  column-gap: 64px;
+  justify-content: space-between;
+  padding-top: 48px;
 }

@@ -3,8 +3,14 @@ import sprite from '../../img/sprite.svg';
 import { arrayForEquip, BUTTON_VALUES } from '../../constants';
 import EquipListItem from '../EquipListItem/EquipListItem';
 import Button from '../Button/Button';
+import clsx from 'clsx';
+import { useState } from 'react';
 
 const CampersListItem = ({ id, camper }) => {
+  const [isActive, setIsActive] = useState(false);
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
   return (
     <article className={css.campersListItemWrapper}>
       <figure className={css.imageWrapper}>
@@ -17,7 +23,21 @@ const CampersListItem = ({ id, camper }) => {
         )}
       </figure>
       <div className={css.infoCamperWrapper}>
-        <h2 className={css.camperTitle}>{camper.name}</h2>
+        <div className={css.titlePriceWrapper}>
+          <h2 className={css.camperTitle}>{camper.name}</h2>
+          <div className={css.price}>
+            <span>{`€${camper.price?.toFixed(2)}`}</span>
+            <svg
+              role="button"
+              className={clsx(css.favoriteIcon, { [css.active]: isActive })}
+              width={22}
+              height={22}
+              onClick={handleClick}
+            >
+              <use href={`${sprite}#heart`}></use>
+            </svg>
+          </div>
+        </div>
         <div className={css.ratingWrapper}>
           {`${camper.rating}(${camper.reviews.length} Reviews)`}
           <span className={css.camperRating}>
@@ -45,7 +65,9 @@ const CampersListItem = ({ id, camper }) => {
             })
             .map((equip, index) => (
               <li key={index}>
-                <EquipListItem equip={equip} />
+                <EquipListItem
+                  equip={equip === 'transmission' ? 'automatic' : equip}
+                />
               </li>
             ))}
         </ul>

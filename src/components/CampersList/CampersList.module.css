@@ -1,4 +1,12 @@
-.catalogList {
-  /* padding-left: 32px; */
-  /* max-width: 888px; */
+.catalogListWrapper {
+  .catalogList {
+    margin-bottom: 40px;
+    & > li:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    & > li {
+      max-width: 888px;
+    }
+  }
 }

@@ -26,7 +26,7 @@ export const arrayForEquip = [
 
 export const equipIcons = {
   AC: '#wind',
-  transmission: '#diagram',
+  automatic: '#diagram',
   kitchen: '#cup-hot',
   TV: '#tv',
   bathroom: '#ph_shower',
