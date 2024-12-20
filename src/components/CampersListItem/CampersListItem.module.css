@@ -19,11 +19,34 @@
   }
 
   .infoCamperWrapper {
-    .camperTitle {
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 1.33;
+    width: 100%;
+    .titlePriceWrapper {
+      display: flex;
+      justify-content: space-between;
+      .camperTitle {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.33;
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.33;
+      }
+      .favoriteIcon {
+        cursor: pointer;
+        fill: var(--main);
+        transition: fill var(--hover-focus-eff);
+        &.active {
+          fill: var(--button);
+        }
+      }
     }
+
     .ratingWrapper {
       display: inline-block;
       padding-left: 20px;

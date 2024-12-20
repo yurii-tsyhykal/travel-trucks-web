@@ -1,8 +1,5 @@
 .asideCatalog {
-  /* display: inline-block; */
   max-width: 360px;
-  /* padding-top: 48px;
-  padding-right: 32px; */
 }
 
 .locationLabel {
@@ -109,7 +106,6 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    border-color: var(--button);
   }
 
   &.active {
