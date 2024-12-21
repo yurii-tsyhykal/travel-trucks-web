@@ -31,8 +31,6 @@ const initialValues = {
 const CatalogForm = () => {
   const dispatch = useDispatch();
   const handleSubmit = values => {
-    console.log(values);
-    
     dispatch(getCampers(values));
   };
 

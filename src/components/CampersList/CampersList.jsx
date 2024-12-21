@@ -8,8 +8,6 @@ const CampersList = () => {
   const campers = useSelector(selectCampers);
   const perPage = useSelector(selectPerPage);
 
-  console.log(perPage);
-
   return (
     <div className={css.catalogListWrapper}>
       <ul className={css.catalogList}>
