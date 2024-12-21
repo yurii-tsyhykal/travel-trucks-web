@@ -1,10 +1,10 @@
 import css from './CampersListItem.module.css';
 import sprite from '../../img/sprite.svg';
-import { arrayForEquip, BUTTON_VALUES } from '../../constants';
+import { arrayForEquip} from '../../constants';
 import EquipListItem from '../EquipListItem/EquipListItem';
-import Button from '../Button/Button';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const CampersListItem = ({ id, camper }) => {
   const [isActive, setIsActive] = useState(false);
@@ -71,7 +71,9 @@ const CampersListItem = ({ id, camper }) => {
               </li>
             ))}
         </ul>
-        <Button onPlace={BUTTON_VALUES.camper}>Show more</Button>
+        <NavLink to={`catalog/:${id}`} className={css.detailsLink}>
+          Show more
+        </NavLink>
       </div>
     </article>
   );

@@ -31,7 +31,3 @@ export const equipIcons = {
   TV: '#tv',
   bathroom: '#ph_shower',
 };
-
-export const BUTTON_VALUES = {
-  camper: 'camper',
-};

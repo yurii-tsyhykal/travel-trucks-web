@@ -1,4 +1,6 @@
 .LoadMoreBtn {
+  display: block;
+  margin: 0 auto;
   border: 1px solid var(--gray-light);
   border-radius: 200px;
   padding: 16px 32px;
