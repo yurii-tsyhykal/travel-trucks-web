@@ -85,5 +85,21 @@
       max-width: 450px;
       margin-bottom: 24px;
     }
+    .detailsLink {
+      display: inline-block;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--white);
+      outline: transparent;
+      border-radius: 200px;
+      padding: 16px 43px;
+      background-color: var(--button);
+      transition: background-color var(--hover-focus-eff);
+
+      &:hover,
+      &:focus {
+        background-color: var(--button-hover);
+      }
+    }
   }
 }
