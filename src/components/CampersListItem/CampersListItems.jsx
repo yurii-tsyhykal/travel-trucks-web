@@ -1,6 +1,6 @@
 import css from './CampersListItem.module.css';
 import sprite from '../../img/sprite.svg';
-import { arrayForEquip} from '../../constants';
+import { arrayForEquip } from '../../constants';
 import EquipListItem from '../EquipListItem/EquipListItem';
 import clsx from 'clsx';
 import { useState } from 'react';
@@ -71,7 +71,7 @@ const CampersListItem = ({ id, camper }) => {
               </li>
             ))}
         </ul>
-        <NavLink to={`catalog/:${id}`} className={css.detailsLink}>
+        <NavLink to={`/:${id}`} target='_blank' className={css.detailsLink}>
           Show more
         </NavLink>
       </div>

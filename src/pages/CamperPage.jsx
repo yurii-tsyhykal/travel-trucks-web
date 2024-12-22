@@ -1,5 +1,11 @@
+import Details from '../components/Details/Details';
+
 const CamperPage = () => {
-  return <div>camper</div>;
+  return (
+    <>
+      <Details />
+    </>
+  );
 };
 
 export default CamperPage;
