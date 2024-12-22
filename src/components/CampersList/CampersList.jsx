@@ -7,6 +7,8 @@ import LoadMore from '../LoadMore/LoadMore';
 const CampersList = () => {
   const campers = useSelector(selectCampers);
   const perPage = useSelector(selectPerPage);
+  console.log(campers);
+  
 
   return (
     <div className={css.catalogListWrapper}>

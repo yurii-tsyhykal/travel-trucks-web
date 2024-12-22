@@ -71,7 +71,7 @@ const CampersListItem = ({ id, camper }) => {
               </li>
             ))}
         </ul>
-        <NavLink to={`/:${id}`} target='_blank' className={css.detailsLink}>
+        <NavLink to={`/catalog/${id}`} target='_blank' className={css.detailsLink}>
           Show more
         </NavLink>
       </div>
