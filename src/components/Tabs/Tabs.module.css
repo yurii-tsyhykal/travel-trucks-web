@@ -1,6 +1,7 @@
 .tabsWrapper {
   border-bottom: 1px solid var(--gray-light);
   .tab {
+    display: inline-block;
     position: relative;
     padding: 0;
     border: none;
