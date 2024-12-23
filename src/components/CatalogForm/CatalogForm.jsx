@@ -185,7 +185,7 @@ const CatalogForm = () => {
                     <use href={`${sprite}#van`}></use>
                   </svg>
                 </div>
-                <span className={css.inputText}>Bathroom</span>
+                <span className={css.inputText}>Van</span>
               </label>
               <label
                 className={clsx(css.labelIcons, css.fullyInputText, {

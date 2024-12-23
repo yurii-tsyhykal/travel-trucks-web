@@ -1,0 +1,33 @@
+.tabsWrapper {
+  border-bottom: 1px solid var(--gray-light);
+  .tab {
+    position: relative;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--main);
+    &:first-child {
+      margin-right: 40px;
+      margin-bottom: 24px;
+    }
+    &::after {
+      z-index: 9;
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 5px;
+      background-color: var(--button);
+      bottom: -26px;
+      left: 0;
+    }
+  }
+  .activeTab {
+    &::after {
+      width: 100%;
+    }
+  }
+}

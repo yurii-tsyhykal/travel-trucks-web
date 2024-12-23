@@ -1,0 +1,7 @@
+    .equipList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 450px;
+      margin-bottom: 24px;
+    }

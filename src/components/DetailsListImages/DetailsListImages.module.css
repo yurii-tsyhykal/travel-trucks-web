@@ -1,8 +1,9 @@
 .detailsImagesList {
   display: flex;
-  justify-content: space-around;
-  /* align-items: center; */
+  justify-content: start;
   margin-bottom: 28px;
+  gap: 48px;
+  overflow: hidden;
   & > li {
     flex-shrink: 0;
     background-color: var(--white);

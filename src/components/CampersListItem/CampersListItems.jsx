@@ -1,10 +1,10 @@
 import css from './CampersListItem.module.css';
 import sprite from '../../img/sprite.svg';
 import { arrayForEquip } from '../../constants';
-import EquipListItem from '../EquipListItem/EquipListItem';
 import clsx from 'clsx';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import EquipList from '../EquipList/EquipList';
 
 const CampersListItem = ({ id, camper }) => {
   const [isActive, setIsActive] = useState(false);
@@ -55,23 +55,12 @@ const CampersListItem = ({ id, camper }) => {
           {camper.location}
         </address>
         <p className={css.camperDescription}>{camper.description}</p>
-        <ul className={css.camperListEquip}>
-          {arrayForEquip
-            .filter(equip => {
-              if (equip === 'transmission') {
-                return camper[equip] === 'automatic';
-              }
-              return camper[equip];
-            })
-            .map((equip, index) => (
-              <li key={index}>
-                <EquipListItem
-                  equip={equip === 'transmission' ? 'automatic' : equip}
-                />
-              </li>
-            ))}
-        </ul>
-        <NavLink to={`/catalog/${id}`} target='_blank' className={css.detailsLink}>
+        <EquipList arrayConst={arrayForEquip} array={camper} />
+        <NavLink
+          to={`/catalog/${id}`}
+          target="_blank"
+          className={css.detailsLink}
+        >
           Show more
         </NavLink>
       </div>
