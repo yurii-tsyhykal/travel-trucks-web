@@ -8,6 +8,7 @@ import { selectDetails } from '../../redux/details/selectors';
 import Loader from '../Loader/Loader';
 import Tabs from '../Tabs/Tabs';
 
+
 const Details = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -41,6 +42,7 @@ const Details = () => {
       <DetailsListImages gallery={camper.gallery} />
       <p className={css.description}>{camper.description}</p>
       <Tabs />
+
     </>
   );
 };
