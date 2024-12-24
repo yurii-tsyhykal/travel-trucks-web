@@ -1,15 +1,24 @@
 import css from './EquipListItem.module.css';
 import sprite from '../../img/sprite.svg';
-import { equipIcons } from '../../constants';
+import { equipIcons, specArrayItems } from '../../constants';
 
-const EquipListItem = ({ equip }) => {
+const EquipListItem = ({ item, value }) => {
+  let iconPath;
+  if (item === 'form') {
+    iconPath = equipIcons.form[value];
+  } else {
+    iconPath = equipIcons[item];
+  }
+
   return (
     <div className={css.equipWrapper}>
       <div className={css.equipIconsWrapper}>
         <svg width={20} height={20}>
-          <use href={`${sprite}${equipIcons[equip]}`}></use>
+          <use href={`${sprite}${iconPath}`}></use>
         </svg>
-        <span className={css.equipText}>{equip}</span>
+        <span className={css.equipText}>
+          {specArrayItems.includes(item) ? value : item}
+        </span>
       </div>
     </div>
   );

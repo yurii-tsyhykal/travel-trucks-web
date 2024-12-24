@@ -24,10 +24,38 @@ export const arrayForEquip = [
   'bathroom',
 ];
 
+export const arrayAllEquip = [
+  'AC',
+  'TV',
+  'bathroom',
+  'form',
+  'gas',
+  'kitchen',
+  'microwave',
+  'radio',
+  'refrigerator',
+  'transmission',
+  'water',
+  'engine',
+];
+
+export const specArrayItems = ['transmission', 'form', 'engine'];
+
 export const equipIcons = {
   AC: '#wind',
-  automatic: '#diagram',
+  transmission: '#diagram',
   kitchen: '#cup-hot',
   TV: '#tv',
   bathroom: '#ph_shower',
+  form: {
+    fullyIntegrated: '#fully',
+    alcove: '#alcove',
+    panelTruck: '#van',
+  },
+  water: '#water',
+  refrigerator: '#refrigerate',
+  radio: '#radio',
+  engine: '#fuel',
+  gas: '#gas',
+  microwave: '#microwave',
 };
