@@ -1,22 +1,18 @@
 import EquipListItem from '../EquipListItem/EquipListItem';
 import css from './EquipList.module.css';
-const EquipList = ({arrayConst, array}) => {
+const EquipList = ({ arrayConst, camper }) => {
+  const array = arrayConst.filter(item => camper[item]).map(item => {
+    return { item, value: camper[item] };
+  });
+
+
   return (
     <ul className={css.equipList}>
-      {arrayConst
-        .filter(equip => {
-          if (equip === 'transmission') {
-            return array[equip] === 'automatic';
-          }
-          return array[equip];
-        })
-        .map((equip, index) => (
-          <li key={index}>
-            <EquipListItem
-              equip={equip === 'transmission' ? 'automatic' : equip}
-            />
-          </li>
-        ))}
+      {array.map(({ item, value }, index) => (
+        <li key={index}>
+          <EquipListItem item={item} value={value}  />
+        </li>
+      ))}
     </ul>
   );
 };

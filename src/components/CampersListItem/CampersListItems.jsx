@@ -55,7 +55,7 @@ const CampersListItem = ({ id, camper }) => {
           {camper.location}
         </address>
         <p className={css.camperDescription}>{camper.description}</p>
-        <EquipList arrayConst={arrayForEquip} array={camper} />
+        <EquipList arrayConst={arrayForEquip} camper={camper} />
         <NavLink
           to={`/catalog/${id}`}
           target="_blank"
