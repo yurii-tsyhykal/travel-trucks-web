@@ -12,7 +12,6 @@ const Details = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const camper = useSelector(selectDetails);
-  console.log(camper);
 
   useEffect(() => {
     dispatch(getCamper(id));
