@@ -8,11 +8,11 @@ import { selectDetails } from '../../redux/details/selectors';
 import Loader from '../Loader/Loader';
 import Tabs from '../Tabs/Tabs';
 
-
 const Details = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const camper = useSelector(selectDetails);
+  console.log(camper);
 
   useEffect(() => {
     dispatch(getCamper(id));
@@ -21,7 +21,6 @@ const Details = () => {
   if (!camper || !camper.gallery) {
     return <Loader />;
   }
-  console.log(camper);
 
   return (
     <>
@@ -42,7 +41,6 @@ const Details = () => {
       <DetailsListImages gallery={camper.gallery} />
       <p className={css.description}>{camper.description}</p>
       <Tabs />
-
     </>
   );
 };

@@ -59,3 +59,5 @@ export const equipIcons = {
   gas: '#gas',
   microwave: '#microwave',
 };
+
+export const featuresEquipListMargin = 'equipListF';

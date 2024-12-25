@@ -9,7 +9,6 @@
     padding: 12px 18px;
     background-color: var(--badges);
     & > svg {
-      /* stroke: var(--main); */
       fill: var(--main);
       margin-right: 8px;
     }
