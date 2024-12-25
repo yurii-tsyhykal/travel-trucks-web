@@ -1,0 +1,11 @@
+.starsList {
+  grid-area: 2 / 2 / 3 / 3;
+  line-height: 0;
+  display: inline-flex;
+  .yellow {
+    fill: var(--rating);
+  }
+  .gray {
+    fill: var(--badges);
+  }
+}
