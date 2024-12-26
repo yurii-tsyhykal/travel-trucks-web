@@ -1,5 +1,8 @@
 .featuresList {
   & > li {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
     display: flex;
     justify-content: space-between;
     font-weight: 500;
