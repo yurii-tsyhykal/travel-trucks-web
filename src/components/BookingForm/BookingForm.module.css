@@ -1,0 +1,83 @@
+.formWrapper {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  max-width: 641px;
+  padding: 44px 57px;
+
+  .bookingTitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .bookingDesc {
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 24px;
+  }
+  .form {
+    .inputWrapper {
+      margin-bottom: 14px;
+      & > input,
+      .calendar {
+        padding: 18px;
+
+        outline: transparent;
+        border: none;
+        width: 100%;
+        border-radius: 12px;
+        background-color: var(--inputs);
+      }
+      .calendar {
+        width: 524px;
+      }
+
+      & > input::placeholder,
+      .calendar::placeholder {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--gray);
+      }
+
+      .error {
+        color: var(--button);
+      }
+    }
+    .textArea {
+      resize: none;
+      width: 100%;
+      min-height: 118px;
+      padding: 18px;
+      outline: transparent;
+      border: none;
+      border-radius: 12px;
+      background-color: var(--inputs);
+      margin-bottom: 24px;
+      &::placeholder {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--gray);
+      }
+    }
+    & > .buttonWrapper {
+      text-align: center;
+      .success {
+        color: green;
+      }
+    }
+  }
+}
+.loaderWrapper {
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: top;
+  min-width: 500px;
+  margin: 0 auto;
+}

@@ -1,9 +1,11 @@
 .featuresWrapper {
+  margin-bottom: 20px;
   display: inline-block;
-  max-width: 588px;
+  width: 631px;
   background-color: var(--inputs);
   padding: 44px 52px;
   border-radius: 10px;
+  margin-right: 40px;
   .vehicleTitle {
     position: relative;
     font-weight: 600;

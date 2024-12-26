@@ -5,7 +5,6 @@ import StarRating from '../StarRating/StarRating';
 
 const Reviews = () => {
   const { reviews } = useSelector(selectDetails);
-  console.log(reviews);
 
   return (
     <div className={css.reviewWrapper}>
