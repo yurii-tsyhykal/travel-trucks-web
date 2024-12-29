@@ -5,9 +5,12 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import EquipList from '../EquipList/EquipList';
+import ReviewsRating from '../ReviewsRating/ReviewsRating';
+import { formattedLocation } from '../../utils/formattedLocation';
 
 const CampersListItem = ({ id, camper }) => {
   const [isActive, setIsActive] = useState(false);
+  const formatLocation = formattedLocation(camper.location);
   const handleClick = () => {
     setIsActive(!isActive);
   };
@@ -38,21 +41,14 @@ const CampersListItem = ({ id, camper }) => {
             </svg>
           </div>
         </div>
-        <div className={css.ratingWrapper}>
-          {`${camper.rating}(${camper.reviews.length} Reviews)`}
-          <span className={css.camperRating}>
-            <svg width={16} height={16}>
-              <use href={`${sprite}#star`}></use>
-            </svg>
-          </span>
-        </div>
+        <ReviewsRating camper={camper} />
         <address className={css.addressCamper}>
           <span className={css.addressIcon}>
             <svg width={16} height={16}>
               <use href={`${sprite}#map`}></use>
             </svg>
           </span>
-          {camper.location}
+          {formatLocation}
         </address>
         <p className={css.camperDescription}>{camper.description}</p>
         <EquipList arrayConst={arrayForEquip} camper={camper} />
