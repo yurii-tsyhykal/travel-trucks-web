@@ -61,3 +61,8 @@ export const equipIcons = {
 };
 
 export const featuresEquipListMargin = 'equipListF';
+
+export const initPagination = {
+  p: 1,
+  l: 4,
+};
