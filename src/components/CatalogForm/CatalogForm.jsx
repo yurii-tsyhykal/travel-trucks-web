@@ -1,6 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import css from './CatalogForm.module.css';
-import { FORMS_ID } from '../../constants';
+import { FORMS_ID, initPagination } from '../../constants';
 import sprite from '../../img/sprite.svg';
 import clsx from 'clsx';
 import * as Yup from 'yup';
@@ -31,7 +31,7 @@ const initialValues = {
 const CatalogForm = () => {
   const dispatch = useDispatch();
   const handleSubmit = values => {
-    dispatch(getCampers(values));
+    dispatch(getCampers({...values, ...initPagination}));
   };
 
   return (

@@ -1,22 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
 import css from './LoadMore.module.css';
-import { loadMore, loadMoreStart } from '../../redux/campers/slice';
-import {
-  selectLoadMoreLoading,
-  selectTotal,
-} from '../../redux/campers/selectors';
+import { selectIsLoading, selectTotal } from '../../redux/campers/selectors';
 import Loader from '../Loader/Loader';
+import { getCampers } from '../../redux/campers/operations';
 
-const LoadMore = ({ perPage }) => {
-  const isLoading = useSelector(selectLoadMoreLoading);
+const LoadMore = () => {
+  const page = 2;
+  const perPage = 4;
+  const isLoading = useSelector(selectIsLoading);
   const total = useSelector(selectTotal);
   const dispatch = useDispatch();
   const handleClick = () => {
     if (perPage < total) {
-      dispatch(loadMoreStart());
-      setTimeout(() => {
-        dispatch(loadMore());
-      }, 1500);
+      dispatch(getCampers({ p: page, l: perPage }));
     }
   };
   return isLoading ? (
@@ -25,7 +21,7 @@ const LoadMore = ({ perPage }) => {
     <button
       className={css.LoadMoreBtn}
       onClick={handleClick}
-      disabled={perPage >= total || total === 0}
+      disabled={page >= total || total === 0}
     >
       LoadMore
     </button>

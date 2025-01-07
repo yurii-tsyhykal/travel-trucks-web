@@ -6,24 +6,14 @@ const INITIAL_VALUES = {
     items: [],
     total: null,
   },
-  perPage: 5,
   isLoading: false,
-  loadMoreLoading: false,
   error: null,
 };
 
 const campersSlice = createSlice({
   name: 'campers',
   initialState: INITIAL_VALUES,
-  reducers: {
-    loadMoreStart: state => {
-      state.loadMoreLoading = true;
-    },
-    loadMore: state => {
-      state.loadMoreLoading = false;
-      state.perPage += 5;
-    },
-  },
+  reducers: {},
   extraReducers: builder => {
     builder
       .addCase(getCampers.pending, state => {
